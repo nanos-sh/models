@@ -1,0 +1,52 @@
+# nano Model Catalog
+# Synced to nano instances via Settings > AI Configuration > Sync Upstream
+#
+# Format:
+#   model_id: provider/model-name (must match LiteLLM model ID format)
+#   display_name: Human-readable name shown in the UI
+#   context_window: Max context window in tokens (optional)
+
+models:
+  # Anthropic (Direct API)
+  - model_id: anthropic/claude-opus-4-6
+    display_name: Claude Opus 4.6
+    context_window: 200000
+
+  - model_id: anthropic/claude-sonnet-4-6
+    display_name: Claude Sonnet 4.6
+    context_window: 200000
+
+  - model_id: anthropic/claude-haiku-4-5
+    display_name: Claude Haiku 4.5
+    context_window: 200000
+
+  # Anthropic (AWS Bedrock)
+  - model_id: bedrock/anthropic.claude-opus-4-6-v1
+    display_name: Claude Opus 4.6 (Bedrock)
+    context_window: 200000
+
+  - model_id: bedrock/anthropic.claude-sonnet-4-6
+    display_name: Claude Sonnet 4.6 (Bedrock)
+    context_window: 200000
+
+  - model_id: bedrock/anthropic.claude-haiku-4-5-20251001-v1:0
+    display_name: Claude Haiku 4.5 (Bedrock)
+    context_window: 200000
+
+  # Google Gemini
+  - model_id: gemini/gemini-3.1-pro-preview
+    display_name: Gemini 3.1 Pro Preview
+    context_window: 1048576
+
+  - model_id: gemini/gemini-3.1-flash-lite-preview
+    display_name: Gemini 3.1 Flash Lite Preview
+    context_window: 1048576
+
+  # OpenAI
+  - model_id: openai/gpt-5.4
+    display_name: GPT-5.4
+    context_window: 1050000
+
+  - model_id: openai/gpt-5-mini-2025-08-07
+    display_name: GPT-5 Mini
+    context_window: 400000
