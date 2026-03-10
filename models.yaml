@@ -10,11 +10,11 @@ models:
   # Anthropic (Direct API)
   - model_id: anthropic/claude-opus-4-6
     display_name: Claude Opus 4.6
-    context_window: 200000
+    context_window: 1000000
 
   - model_id: anthropic/claude-sonnet-4-6
     display_name: Claude Sonnet 4.6
-    context_window: 200000
+    context_window: 1000000
 
   - model_id: anthropic/claude-haiku-4-5
     display_name: Claude Haiku 4.5
@@ -23,11 +23,11 @@ models:
   # Anthropic (AWS Bedrock)
   - model_id: bedrock/anthropic.claude-opus-4-6-v1
     display_name: Claude Opus 4.6 (Bedrock)
-    context_window: 200000
+    context_window: 1000000
 
   - model_id: bedrock/anthropic.claude-sonnet-4-6
     display_name: Claude Sonnet 4.6 (Bedrock)
-    context_window: 200000
+    context_window: 1000000
 
   - model_id: bedrock/anthropic.claude-haiku-4-5-20251001-v1:0
     display_name: Claude Haiku 4.5 (Bedrock)
