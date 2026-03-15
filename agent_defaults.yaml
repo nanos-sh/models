@@ -1,0 +1,86 @@
+# Default Agent Model Assignments
+# Synced to nano instances alongside models.yaml.
+# Used to seed agent_model_config when no custom config exists.
+#
+# Each provider section maps agent IDs to model IDs from models.yaml.
+# Agents not listed inherit from the "_default" key for that provider.
+#
+# Agent tiers:
+#   capable: complex reasoning (query, detection, shadow, notebook, enrichment)
+#   fast:    high-throughput / low-latency (parser, summarize, tuning, validation, ai_pipe)
+#   mid:     moderate complexity (dashboard, timeline, parser_edit, shadow_narrative)
+
+providers:
+  anthropic:
+    _default:
+      model_id: anthropic/claude-sonnet-4-6
+      max_tokens: 4096
+      temperature: 0.7
+    capable:
+      model_id: anthropic/claude-sonnet-4-6
+      max_tokens: 8192
+      temperature: 0.5
+    fast:
+      model_id: anthropic/claude-haiku-4-5
+      max_tokens: 4096
+      temperature: 0.3
+
+  google:
+    _default:
+      model_id: gemini/gemini-3.1-pro-preview
+      max_tokens: 4096
+      temperature: 0.7
+    capable:
+      model_id: gemini/gemini-3.1-pro-preview
+      max_tokens: 8192
+      temperature: 0.5
+    fast:
+      model_id: gemini/gemini-3.1-flash-lite-preview
+      max_tokens: 4096
+      temperature: 0.3
+
+  openai:
+    _default:
+      model_id: openai/gpt-5.4
+      max_tokens: 4096
+      temperature: 0.7
+    capable:
+      model_id: openai/gpt-5.4
+      max_tokens: 8192
+      temperature: 0.5
+    fast:
+      model_id: openai/gpt-5-mini-2025-08-07
+      max_tokens: 4096
+      temperature: 0.3
+
+  bedrock:
+    _default:
+      model_id: bedrock/anthropic.claude-sonnet-4-6
+      max_tokens: 4096
+      temperature: 0.7
+    capable:
+      model_id: bedrock/anthropic.claude-sonnet-4-6
+      max_tokens: 8192
+      temperature: 0.5
+    fast:
+      model_id: bedrock/anthropic.claude-haiku-4-5-20251001-v1:0
+      max_tokens: 4096
+      temperature: 0.3
+
+# Map each agent to a tier
+agents:
+  query: capable
+  detection: capable
+  parser: fast
+  parser_edit: mid
+  summarize: fast
+  dashboard: mid
+  timeline: mid
+  notebook: capable
+  shadow_hunting: capable
+  shadow_narrative: mid
+  tuning_auto: fast
+  tuning_hint: fast
+  enrichment_codegen: capable
+  udm_validation: fast
+  ai_pipe: fast
