@@ -6,65 +6,68 @@
 # Agents not listed inherit from the "_default" key for that provider.
 #
 # Agent tiers:
-#   capable: complex reasoning (query, detection, shadow, notebook, enrichment)
+#   capable: complex reasoning, large context (query, detection, shadow, notebook, enrichment)
 #   fast:    high-throughput / low-latency (parser, summarize, tuning, validation, ai_pipe)
 #   mid:     moderate complexity (dashboard, timeline, parser_edit, shadow_narrative)
+#
+# Note: max_tokens are intentionally high — SIEM agents work with large log payloads,
+# detection rule sets, and multi-event timelines that can easily fill 16-32K+ tokens.
 
 providers:
   anthropic:
     _default:
       model_id: anthropic/claude-sonnet-4-6
-      max_tokens: 4096
+      max_tokens: 16384
       temperature: 0.7
     capable:
       model_id: anthropic/claude-sonnet-4-6
-      max_tokens: 8192
+      max_tokens: 32768
       temperature: 0.5
     fast:
       model_id: anthropic/claude-haiku-4-5
-      max_tokens: 4096
+      max_tokens: 16384
       temperature: 0.3
 
   google:
     _default:
       model_id: gemini/gemini-3.1-pro-preview
-      max_tokens: 4096
+      max_tokens: 16384
       temperature: 0.7
     capable:
       model_id: gemini/gemini-3.1-pro-preview
-      max_tokens: 8192
+      max_tokens: 32768
       temperature: 0.5
     fast:
       model_id: gemini/gemini-3.1-flash-lite-preview
-      max_tokens: 4096
+      max_tokens: 16384
       temperature: 0.3
 
   openai:
     _default:
       model_id: openai/gpt-5.4
-      max_tokens: 4096
+      max_tokens: 16384
       temperature: 0.7
     capable:
       model_id: openai/gpt-5.4
-      max_tokens: 8192
+      max_tokens: 32768
       temperature: 0.5
     fast:
       model_id: openai/gpt-5-mini-2025-08-07
-      max_tokens: 4096
+      max_tokens: 16384
       temperature: 0.3
 
   bedrock:
     _default:
       model_id: bedrock/anthropic.claude-sonnet-4-6
-      max_tokens: 4096
+      max_tokens: 16384
       temperature: 0.7
     capable:
       model_id: bedrock/anthropic.claude-sonnet-4-6
-      max_tokens: 8192
+      max_tokens: 32768
       temperature: 0.5
     fast:
       model_id: bedrock/anthropic.claude-haiku-4-5-20251001-v1:0
-      max_tokens: 4096
+      max_tokens: 16384
       temperature: 0.3
 
 # Map each agent to a tier
