@@ -84,6 +84,7 @@ agents:
   shadow_narrative: mid
   tuning_auto: fast
   tuning_hint: fast
+  concierge: fast
   enrichment_codegen: capable
   udm_validation: fast
   ai_pipe: fast
