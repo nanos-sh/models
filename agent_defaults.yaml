@@ -72,7 +72,7 @@ providers:
 
 # Map each agent to a tier
 agents:
-  query: capable
+  query: fast
   detection: capable
   parser: fast
   parser_edit: mid
