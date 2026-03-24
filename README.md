@@ -16,7 +16,7 @@ nano syncs this catalog from **Settings > AI Configuration > Sync Upstream**. Th
 
 ```yaml
 models:
-  - model_id: anthropic/claude-sonnet-4-6   # LiteLLM provider/model format
+  - model_id: anthropic/claude-sonnet-4-6   # provider/model format
     display_name: Claude Sonnet 4.6          # Shown in the UI
     context_window: 200000                   # Optional, in tokens
 ```

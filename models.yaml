@@ -2,7 +2,7 @@
 # Synced to nano instances via Settings > AI Configuration > Sync Upstream
 #
 # Format:
-#   model_id: provider/model-name (must match LiteLLM model ID format)
+#   model_id: provider/model-name (e.g. anthropic/claude-sonnet-4-6)
 #   display_name: Human-readable name shown in the UI
 #   context_window: Max context window in tokens (optional)
 
