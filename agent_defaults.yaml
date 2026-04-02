@@ -74,8 +74,8 @@ providers:
 agents:
   query: fast
   detection: capable
-  parser: fast
-  parser_edit: mid
+  parser: capable
+  parser_edit: capable
   summarize: fast
   dashboard: mid
   timeline: mid
