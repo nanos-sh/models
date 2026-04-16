@@ -8,8 +8,8 @@
 
 models:
   # Anthropic (Direct API)
-  - model_id: anthropic/claude-opus-4-6
-    display_name: Claude Opus 4.6
+  - model_id: anthropic/claude-opus-4-7
+    display_name: Claude Opus 4.7
     context_window: 1000000
 
   - model_id: anthropic/claude-sonnet-4-6
@@ -21,8 +21,8 @@ models:
     context_window: 200000
 
   # Anthropic (AWS Bedrock)
-  - model_id: bedrock/anthropic.claude-opus-4-6-v1
-    display_name: Claude Opus 4.6 (Bedrock)
+  - model_id: bedrock/anthropic.claude-opus-4-7-v1
+    display_name: Claude Opus 4.7 (Bedrock)
     context_window: 1000000
 
   - model_id: bedrock/anthropic.claude-sonnet-4-6
