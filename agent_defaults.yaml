@@ -96,8 +96,12 @@ agents:
   dashboard: mid
   timeline: mid
   notebook: capable
+  query_correction: fast
+  query_best_practices: fast
+  investigation: capable
   shadow_hunting: capable
   shadow_narrative: mid
+  closure_summary: fast
   tuning_auto: fast
   tuning_hint: fast
   concierge: fast
